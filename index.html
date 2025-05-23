@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Eclipse Effect</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .moon{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background-color: #ffee00;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(255, 255, 200, 0.8);
+        }
+        .shadow{
+            position: absolute;
+            top: 0;
+            left: -150px;
+            width: 150px;
+            height: 150px;
+            background-color: #000;
+            border-radius: 50%;
+            animation: eclipse 5s infinite ease-in-out;
+        }
+        @keyframes eclipse{
+            0%, 100%{
+                transform: translateX(0)
+            }
+            50%{
+                transform: translate(150px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="moon">
+        <div class="shadow"></div>
+    </div>
+</body>
+</html>
